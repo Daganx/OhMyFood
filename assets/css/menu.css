@@ -1,0 +1,114 @@
+/******** GENERAL ********/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+
+:root{
+    --maincolor : #9356dc;
+    --secondcolor : #FF79DA;
+    --thirdcolor : #99E2D0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+  
+ul{
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    border: none;
+}
+
+/**** GESTION MAIN CONTAINER  ******/
+
+.main-container{
+    width: 100%;
+    max-width: 375px;
+    box-sizing: border-box;
+}
+
+/******* HEADER ********/
+
+
+header{
+    position: relative;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+nav > i {
+    position: absolute;
+    left: 1rem;
+}
+
+.restaurant-presentation{
+    width: 100%;
+}
+
+.restaurant-presentation > img{
+    width: 100%;
+    height: 275px;
+}
+
+/* MENUS */
+
+main{
+    background-color: lightgray;
+}
+
+.menu-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.entree-container > h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.plats-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dessert-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* FOOTER */
+
+footer{
+    background-color: #353535;
+    color: white;
+    padding-left: 1rem;
+}
+
+footer > figure > img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer > ul > li{
+    margin-bottom: 5px;
+}
+
+
+
