@@ -47,8 +47,12 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+nav > figure{
+    position: relative;
 }
 
 nav > i {
@@ -63,35 +67,115 @@ nav > i {
 .restaurant-presentation > img{
     width: 100%;
     height: 275px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
 }
 
 /* MENUS */
 
 main{
-    background-color: lightgray;
+    background-color: #F6F6F6;
+    /* position: absolute;
+    width: 100%;
+    top: 283px; */
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    z-index: 1000;
+    margin-top: -4rem;
+    position: relative;
+    
 }
 
 .menu-container{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: baseline;
 }
 
-.entree-container > h3 {
-    margin-top: 1rem;
+.menu-container > h1{
+    font-family: 'Shrikhand', serif;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 28px;
+}
+
+.menu-container > i{
+    padding-left: 2rem;
+}
+
+/* ENTREES */
+
+.article-container > h2 {
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.article-infos{
+    margin-left: 1rem;
+    margin-right: 1rem;
     margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -webkit-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -moz-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
 }
 
-.plats-container{
+.plate-and-price{
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-infos > h3{
+    font-size: 18px;
+    font-weight:500;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 3px;
+}
+
+.plate-and-price > p{
+    font-size: 15px;
+    font-weight: 200;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.plate-and-price > p:nth-child(2){
+    padding-right: 1rem;
+    font-weight: bold;
+}
+
+main > section:nth-child(2){
+    padding-bottom: 1rem;
+}
+
+main > section:nth-child(3){
+    padding-bottom: 1rem;
+}
+
+.article-container{
     margin-top: 1rem;
-    margin-bottom: 1rem;
+}
+.btn-commander{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
 }
 
-.dessert-container{
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
 
+button{
+    text-align: center;
+    padding: 15px 50px 15px 50px;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
+    color: white;
+    font-size: 16px;
+    border: none;
+}
 
 /* FOOTER */
 
@@ -99,15 +183,31 @@ footer{
     background-color: #353535;
     color: white;
     padding-left: 1rem;
-}
-
-footer > figure > img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer > ul > li{
-    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+footer > ul > li:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+.oh-my-food-footer{
+    font-family: 'Shrikhand', serif;
+    font-size: 18px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body > div > footer > ul > li:nth-child(1) > a > i{
+    padding-right: 1.4rem;
+    font-size: 12px;
+}
+footer > ul > li:nth-child(2) > a > i{
+    padding-right: 1rem;
+    font-size: 12px;
 }
 
 

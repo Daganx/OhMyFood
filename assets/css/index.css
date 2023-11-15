@@ -45,14 +45,11 @@ header{
     align-items: center;
 }
 
-.header-logo{
-    width: 50%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.header-logo > img{
-    width: 100%;
+.oh-my-food {
+    font-family: 'Shrikhand', serif;
+    font-size: 30px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 /****** GESTION FORM *******/
@@ -101,14 +98,18 @@ header{
 .introduction-container > h2{
     text-align: center;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .introduction-container > button {
     margin-top: 1rem;
     text-align: center;
-    padding: 10px 20px 10px 20px;
+    padding: 15px 20px 15px 20px;
     border-radius: 50px;
+    background-image: linear-gradient(to bottom, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
+    color: white;
+    font-size: 16px;
+    border: none;
 }
 
 /******* FONCTIONNEMENT *****/
@@ -123,6 +124,7 @@ header{
 .fonctionnement-container > h3{
     margin-top: 2rem;
     margin-left: 1rem;
+    font-size: 24px;
     
 }
 
@@ -137,14 +139,47 @@ header{
 
 .explain-card{
     display: flex;
-    border: 2px solid black;
     padding: 25px;
     border-radius: 15px;
     text-align: center;
+    position: relative;
+    background-color: #f6f6f6;
+    box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -webkit-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -moz-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+}
+
+.explain-span-container{
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--maincolor); 
+    color: #fff;
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .explain-card-text{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.explain-card-text > p{
+    width: 100%;
+    font-weight: 500;
+    color: #000
+}
+
+.explain-card-text > i{
+    margin-left: 20px;
+    color: #7e7e7e;
 }
 
 /******* RESTAURANTS ******/
@@ -159,6 +194,7 @@ header{
     padding-top: 3rem;
     padding-left: 1rem;
     margin-bottom: 2rem;
+    font-size: 24px;
 }
 
 .cards-container{
@@ -171,18 +207,49 @@ header{
 }
 
 .card{
+    position: relative;
     width: 90%;
-    border: 1px solid grey;
     background-color: white;
-    
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -webkit-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    -moz-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
 }
 
 .card > img{
     width: 100%;
-    height: 231px;
+    height: 210px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
     object-fit: cover;
+}
+
+figcaption{
+    margin-left: 1rem;
+}
+
+ figcaption > h4{
+    margin-top: 1rem;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+figcaption > p{
+    margin-bottom: 1rem;
+    font-weight: 300;
+} 
+
+.gestion-heart{
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.gestion-heart > i{
+    font-size: 22px;
 }
 
 /* FOOTER */
@@ -191,14 +258,29 @@ footer{
     background-color: #353535;
     color: white;
     padding-left: 1rem;
-}
-
-footer > figure > img {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
 }
 
 footer > ul > li{
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
+footer > ul > li:nth-last-child(1){
+    margin-bottom: 0;
+}
+
+.oh-my-food-footer{
+    font-family: 'Shrikhand', serif;
+    font-size: 18px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+body > div > footer > ul > li:nth-child(1) > a > i{
+    padding-right: 1.4rem;
+    font-size: 12px;
+}
+footer > ul > li:nth-child(2) > a > i{
+    padding-right: 1rem;
+    font-size: 12px;
+}
