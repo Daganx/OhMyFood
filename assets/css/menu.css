@@ -49,15 +49,18 @@ nav{
     align-items: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
-}
-
-nav > figure{
     position: relative;
 }
 
-nav > i {
+nav > p{
+    font-family: 'Shrikhand', serif;
+    font-size: x-large;
+}
+
+nav > a > i{
     position: absolute;
-    left: 1rem;
+    left: 2rem;
+    top: 20px;
 }
 
 .restaurant-presentation{
@@ -74,11 +77,8 @@ nav > i {
 
 /* MENUS */
 
-main{
+.main-menu-container{
     background-color: #F6F6F6;
-    /* position: absolute;
-    width: 100%;
-    top: 283px; */
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;
     z-index: 1000;
@@ -102,6 +102,7 @@ main{
 
 .menu-container > i{
     padding-left: 2rem;
+    font-size: 24px;
 }
 
 /* ENTREES */
@@ -111,7 +112,19 @@ main{
     padding-bottom: 1rem;
     font-weight: 300;
     font-size: 16px;
+    position: relative;
 }
+
+h2:after{
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    background-color: var(--thirdcolor);;
+    width: 40px;
+    left: 1rem;
+}
+
 
 .article-infos{
     margin-left: 1rem;
@@ -148,11 +161,11 @@ main{
     font-weight: bold;
 }
 
-main > section:nth-child(2){
+.main-menu-container > section:nth-child(2){
     padding-bottom: 1rem;
 }
 
-main > section:nth-child(3){
+.main-menu-container > section:nth-child(3){
     padding-bottom: 1rem;
 }
 
@@ -175,6 +188,7 @@ button{
     color: white;
     font-size: 16px;
     border: none;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -201,7 +215,7 @@ footer > ul > li:nth-last-child(1){
     padding-bottom: 1rem;
 }
 
-body > div > footer > ul > li:nth-child(1) > a > i{
+footer > ul > li:nth-child(1) > a > i{
     padding-right: 1.4rem;
     font-size: 12px;
 }
