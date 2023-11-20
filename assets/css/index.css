@@ -28,6 +28,47 @@ input{
     border: none;
 }
 
+/******** GESTION DU LOADER  ********/
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(224, 222, 222); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:100; 
+}
+
+.loader {
+    animation: spin 2s linear(0 0%, 0.57 94.28%) infinite;
+}
+
+.loader > img{
+    height: 230px;
+    width: 230px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.loader-container {
+    animation: 3s fadeOut forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+
+
 /**** GESTION MAIN CONTAINER  ******/
 
 .main-container{
@@ -183,6 +224,11 @@ header{
     color: #7e7e7e;
 }
 
+.explain-card-text > i:hover{
+    color: var(--maincolor);
+}
+
+
 /******* RESTAURANTS ******/
 
 .restaurants-container{
@@ -239,7 +285,6 @@ header{
     border-radius: 5px;
     padding: 4px 5px;
     font-size: 14px;
-    
 }
 
 figcaption{
@@ -257,6 +302,7 @@ figcaption > p{
     font-weight: 300;
 } 
 
+/****** GESTION DES COEURS ********/
 .gestion-heart{
     position: absolute;
     bottom: 2rem;
@@ -266,6 +312,22 @@ figcaption > p{
 .gestion-heart > i{
     font-size: 22px;
 }
+
+.fa-solid.fa-heart{
+    opacity: 0; /* REMPLISSAGE DU COEUR A 0*/
+    color: transparent;
+}
+
+.fa-heart{
+    opacity: 1;
+    transition: opacity 0.3s linear; /* GESTION DE L'ANIMATION EN HOVER */
+}
+
+.fa-solid:hover{
+    opacity: 1;
+    color: rgb(151, 47, 139);
+}
+/****** GESTION DES COEURS ********/
 
 /* FOOTER */
 
