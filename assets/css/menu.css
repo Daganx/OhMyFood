@@ -60,7 +60,7 @@ nav > p{
 nav > a > i{
     position: absolute;
     left: 2rem;
-    top: 20px;
+    top: 25px;
 }
 
 .restaurant-presentation{
@@ -89,20 +89,49 @@ nav > a > i{
 
 .menu-container{
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-container > h1{
     font-family: 'Shrikhand', serif;
-    padding-left: 1rem;
     padding-top: 2rem;
+    padding-right: 2rem;
     padding-bottom: 2rem;
     font-size: 28px;
 }
 
-.menu-container > i{
-    padding-left: 2rem;
+.heart{
+    position: relative;
+}
+
+.heart > i{
     font-size: 24px;
+}
+
+.like-checkbox {
+    display: none; /*  Display NONE pour le checkbox  */
+}
+
+.like-label {
+    cursor: pointer; /* Changement du curseur au clic */
+}
+
+.fa-solid.fa-heart {
+    position: absolute; /* Positionnement de notre deuxieme coeur FA-SOLID */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Délai de notre animation  */
+}
+
+.like-checkbox:checked + .like-label .fa-heart {
+    opacity: 0; /* Quand notre checkbox est cliqué alors le premier coeur disparait */
+}
+
+.like-checkbox:checked + .like-label .fa-solid.fa-heart {
+    opacity: 1;
+    color: var(--maincolor); /* Couleur de remplissage du cœur */
 }
 
 /* ENTREES */

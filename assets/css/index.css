@@ -35,6 +35,7 @@ input{
     top: 0;
     left: 0;
     width: 100%;
+    max-width: 375px;
     height: 100%;
     background-color: rgb(224, 222, 222); 
     display: flex;
@@ -303,34 +304,97 @@ figcaption > p{
 } 
 
 /****** GESTION DES COEURS ********/
+
 .gestion-heart{
-    position: absolute;
+    position: absolute; /* Positionnement de notre coeur FA-HEART */
     bottom: 2rem;
     right: 2rem;
+    display: inline-block;
+    font-size: 24px;
 }
 
-.gestion-heart > i{
-    font-size: 22px;
+.like-checkbox {
+    display: none; /*  Display NONE pour le checkbox  */
 }
 
-.fa-solid.fa-heart{
-    opacity: 0; /* REMPLISSAGE DU COEUR A 0*/
-    color: transparent;
+.like-label {
+    cursor: pointer; /* Changement du curseur au clic */
 }
 
-.fa-heart{
+.fa-solid.fa-heart {
+    position: absolute; /* Positionnement de notre deuxieme coeur FA-SOLID */
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Délai de notre animation  */
+}
+
+.like-checkbox:checked + .like-label .fa-heart {
+    opacity: 0; /* Quand notre checkbox est cliqué alors le premier coeur disparait */
+}
+
+.like-checkbox:checked + .like-label .fa-solid.fa-heart {
     opacity: 1;
-    transition: opacity 0.3s linear; /* GESTION DE L'ANIMATION EN HOVER */
+    color: var(--maincolor); /* Couleur de remplissage du cœur */
 }
 
-.fa-solid:hover{
+/* COEUR N2 */
+
+.like-checkbox-2 {
+    display: none;
+}
+
+.like-label-2 {
+    cursor: pointer;
+}
+
+.like-checkbox-2:checked + .like-label-2 .fa-heart {
+    opacity: 0;
+}
+
+.like-checkbox-2:checked + .like-label-2 .fa-solid.fa-heart {
     opacity: 1;
-    color: rgb(151, 47, 139);
+    color: var(--maincolor); 
 }
-/****** GESTION DES COEURS ********/
 
+/* COEUR N3 */
+
+.like-checkbox-3 {
+    display: none;
+}
+
+.like-label-3 {
+    cursor: pointer;
+}
+
+.like-checkbox-3:checked + .like-label-3 .fa-heart {
+    opacity: 0;
+}
+
+.like-checkbox-3:checked + .like-label-3 .fa-solid.fa-heart {
+    opacity: 1;
+    color: var(--maincolor); 
+}
+
+/* COEUR N4 */
+
+.like-checkbox-4 {
+    display: none;
+}
+
+.like-label-4 {
+    cursor: pointer;
+}
+
+.like-checkbox-4:checked + .like-label-4 .fa-heart {
+    opacity: 0;
+}
+
+.like-checkbox-4:checked + .like-label-4 .fa-solid.fa-heart {
+    opacity: 1;
+    color: var(--maincolor); 
+}
 /* FOOTER */
-
 footer{
     background-color: #353535;
     color: white;

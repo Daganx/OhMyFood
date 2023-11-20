@@ -14,7 +14,7 @@
     <title>Menu - À la Francaise</title>
 </head>
 <body>
-    < class="main-container">
+    <div class="main-container">
         <!-- HEADER -->
 
         <header>
@@ -34,7 +34,15 @@
         <main class="main-menu-container">
             <section class="menu-container">
                 <h1>La palette du goût</h1>
-                <i class="fa-regular fa-heart"></i>
+                <div class="like-container">
+                    <input type="checkbox" id="like" class="like-checkbox">
+                    <label for="like" class="like-label">
+                        <div class="heart">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                    </label>
+                </div>
             </section>
             <section class="article-container">
                 <h2>ENTRÉES</h2>

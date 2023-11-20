@@ -1,10 +1,20 @@
-@media ( min-width: 1024px) and (max-width: 1440px) {
+@media ( min-width: 1024px) and (max-width: 2560px) {
 
     /****** GESTION INDEX ******/
     .main-container{
         width: 100%;
-        max-width: 1440px;
+        max-width: 2560px;
         box-sizing: border-box;
+    }
+
+    .loader-container{
+        max-width: 2560px;
+        width: 100%;
+     }
+
+     .restaurant-presentation > img{
+        width: 100%;
+        height: 50vh;
     }
 
     h1{
@@ -80,6 +90,10 @@
     }
 
     /******* GESTION DES MENUS *******/
+
+    .menu-container{
+        text-align: center;
+    }
 
     .main-menu-container{
         display: flex;
