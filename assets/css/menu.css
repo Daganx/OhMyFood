@@ -1,44 +1,34 @@
 /******** GENERAL ********/
-
 *{
     margin: 0;
     padding: 0;
     font-family: 'Roboto';
 }
-
 :root{
     --maincolor : #9356dc;
     --secondcolor : #FF79DA;
     --thirdcolor : #99E2D0;
 }
-
 a{
     color: inherit;
     text-decoration: none;
 }
-  
 ul{
     text-decoration: none;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-
 input{
     border: none;
 }
-
 /**** GESTION MAIN CONTAINER  ******/
-
 .main-container{
     width: 100%;
     max-width: 375px;
     box-sizing: border-box;
 }
-
 /******* HEADER ********/
-
-
 header{
     position: relative;
 }
@@ -131,11 +121,9 @@ nav > a > i{
 
 .like-checkbox:checked + .like-label .fa-solid.fa-heart {
     opacity: 1;
-    color: var(--maincolor); /* Couleur de remplissage du cœur */
+    color: var(--maincolor); /* Couleur de remplissage du coeur */
 }
-
-/* ENTREES */
-
+/******* ENTREES ********/
 .article-container > h2 {
     padding-left: 1rem;
     padding-bottom: 1rem;
@@ -154,7 +142,6 @@ h2:after{
     left: 1rem;
 }
 
-
 .article-infos{
     margin-left: 1rem;
     margin-right: 1rem;
@@ -163,11 +150,47 @@ h2:after{
     box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
     -webkit-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
     -moz-box-shadow: 2px 2px 12px 2px rgba(194,194,194,0.75);
+    position: relative;
+    overflow: hidden;
 }
 
 .plate-and-price{
     display: flex;
     justify-content: space-between;
+}
+
+.check-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    opacity: 0;
+    background-color: #4CAF50;
+    color: #fff;
+    height: 100%;
+    width: 70px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.check-icon > i{
+    font-size: 24px;
+}
+
+.article-infos:hover .check-icon {
+    opacity: 1;
+    right: 0;
+}
+
+.article-infos:hover .plate-and-price {
+    margin-right: 70px; 
+}
+
+.article-infos:hover h3 {
+    margin-right: 70px; 
 }
 
 .article-infos > h3{
@@ -208,7 +231,6 @@ h2:after{
     padding-bottom: 3rem;
 }
 
-
 button{
     text-align: center;
     padding: 15px 50px 15px 50px;
@@ -219,9 +241,7 @@ button{
     border: none;
     cursor: pointer;
 }
-
-/* FOOTER */
-
+/****** FOOTER ********/
 footer{
     background-color: #353535;
     color: white;
@@ -253,5 +273,35 @@ footer > ul > li:nth-child(2) > a > i{
     font-size: 12px;
 }
 
+/* ANIMATION */
 
+.article-container {
+    opacity: 0; /* Commencer avec une opacité de 0 */
+    transform: translateY(20px); /* Déplacer vers le bas de 20px */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajouter une transition pour une apparition en douceur */
+}
 
+/* Gestion de l'apparition des animations */
+.menu-container {
+    animation: fadeInUp 0.5s ease 0.5s forwards;
+}
+
+.article-container:nth-child(2) {
+    animation: fadeInUp 0.5s ease 1s forwards;
+}
+
+.article-container:nth-child(3) {
+    animation: fadeInUp 0.5s ease 1.5s forwards;
+}
+
+.article-container:nth-child(4) {
+    animation: fadeInUp 0.5s ease 2s forwards;
+}
+
+/* Keyframe pour mettre l'opacity à 1, Place Initial */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
