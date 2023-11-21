@@ -38,7 +38,7 @@ input{
 }
 
 .loader {
-    animation: spin 2s linear(0 0%, 0.57 94.28%) infinite;
+    animation: spin 2s linear infinite;
 }
 
 .loader > img{
