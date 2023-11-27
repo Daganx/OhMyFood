@@ -42,7 +42,7 @@ nav{
     position: relative;
 }
 
-nav > p{
+nav > h1{
     font-family: 'Shrikhand', serif;
     font-size: x-large;
 }
@@ -64,9 +64,7 @@ nav > a > i{
     position: relative;
     z-index: 1;
 }
-
 /* MENUS */
-
 .main-menu-container{
     background-color: #F6F6F6;
     border-top-right-radius: 50px;
@@ -74,7 +72,6 @@ nav > a > i{
     z-index: 1000;
     margin-top: -4rem;
     position: relative;
-    
 }
 
 .menu-container{
@@ -83,7 +80,7 @@ nav > a > i{
     justify-content: center;
 }
 
-.menu-container > h1{
+.menu-container > h2{
     font-family: 'Shrikhand', serif;
     padding-top: 2rem;
     padding-right: 2rem;
@@ -121,10 +118,12 @@ nav > a > i{
 
 .like-checkbox:checked + .like-label .fa-solid.fa-heart {
     opacity: 1;
-    color: var(--maincolor); /* Couleur de remplissage du coeur */
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;/* Couleur de remplissage du coeur */
 }
 /******* ENTREES ********/
-.article-container > h2 {
+.article-container > h3 {
     padding-left: 1rem;
     padding-bottom: 1rem;
     font-weight: 300;
@@ -132,7 +131,7 @@ nav > a > i{
     position: relative;
 }
 
-h2:after{
+h3:after{
     content: "";
     position: absolute;
     bottom: 10px;
@@ -157,48 +156,20 @@ h2:after{
 .plate-and-price{
     display: flex;
     justify-content: space-between;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
-.check-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute; 
-    top: 50%;
-    right: -20px;
-    transform: translateY(-50%);
-    opacity: 0;
-    background-color: #4CAF50;
-    color: #fff;
-    height: 100%;
-    width: 70px;
-    border-radius: 5px;
-    transition: opacity 0.3s ease, right 0.3s ease;
-}
-
-.check-icon > i{
-    font-size: 24px;
-}
-
-.article-infos:hover .check-icon {
-    opacity: 1;
-    right: 0;
-}
-
-.article-infos:hover .plate-and-price {
-    margin-right: 70px; 
-}
-
-.article-infos:hover h3 {
-    margin-right: 70px; 
-}
-
-.article-infos > h3{
+.article-infos > h4{
     font-size: 18px;
     font-weight:500;
     padding-top: 1rem;
     padding-left: 1rem;
     padding-bottom: 3px;
+    white-space: nowrap; /* Empêcher le texte de passer à la ligne */
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 .plate-and-price > p{
@@ -206,6 +177,11 @@ h2:after{
     font-weight: 200;
     padding-left: 1rem;
     padding-bottom: 1rem;
+}
+
+.plate-and-price > p:nth-child(1){
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .plate-and-price > p:nth-child(2){
@@ -223,7 +199,42 @@ h2:after{
 
 .article-container{
     margin-top: 1rem;
+    cursor: pointer;
 }
+
+.article-infos {
+    position: relative;
+    overflow: hidden;
+}
+
+.check-icon {
+    color: white;
+    font-size:larger;
+    position: absolute;
+    top: 0;
+    right: -50px; /* Position de départ de la coche (cachée à droite) */
+    width: 50px;
+    height: 100%;
+    background-color: #99E2D0;
+    transition: right 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-infos:hover .check-icon {
+    right: 0; /* Position finale de la coche lorsqu'on survole l'article */
+}
+
+.article-infos:hover .plate-and-price {
+    transition: padding-right 0.5s ease-in-out;
+    padding-right: 50px; /* Ajustez la valeur selon la largeur de votre coche */
+}
+
+.article-infos:hover > h4{
+    padding-right: 50px;
+}
+
 .btn-commander{
     display: flex;
     justify-content: center;
@@ -240,6 +251,13 @@ button{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    filter: brightness(1.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 /****** FOOTER ********/
 footer{
@@ -272,9 +290,7 @@ footer > ul > li:nth-child(2) > a > i{
     padding-right: 1rem;
     font-size: 12px;
 }
-
 /* ANIMATION */
-
 .article-container {
     opacity: 0; /* Commencer avec une opacité de 0 */
     transform: translateY(20px); /* Déplacer vers le bas de 20px */

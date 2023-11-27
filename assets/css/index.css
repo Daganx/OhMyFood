@@ -38,7 +38,7 @@ input{
 }
 
 .loader {
-    animation: spin 2s linear infinite;
+    animation: spin 3s linear infinite;
 }
 
 .loader > img{
@@ -50,7 +50,6 @@ input{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
-
 
 .loader-container {
     animation: 3s fadeOut forwards;
@@ -111,7 +110,6 @@ header{
     gap: 10px;
     background-color: #F6F6F6;
     padding-bottom: 4rem;
-    
 }
 
 .introduction-container > h1{
@@ -135,11 +133,13 @@ header{
     font-size: 16px;
     border: none;
     cursor: pointer;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: 0.2s ease-in-out;
 }
 
 button:hover{
-    -webkit-box-shadow: inset 0px 0px 10px 1px #FFFFFF; 
-    box-shadow: inset 0px 0px 10px 1px #FFFFFF;
+    filter: brightness(1.1);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 /******* FONCTIONNEMENT *****/
 .fonctionnement-container{
@@ -153,7 +153,6 @@ button:hover{
     margin-top: 2rem;
     margin-left: 1rem;
     font-size: 24px;
-    
 }
 
 .explain-container{
@@ -233,7 +232,6 @@ button:hover{
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    
 }
 
 .card{
@@ -306,16 +304,18 @@ figcaption > p{
     top: 0;
     left: 0;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Délai de notre animation  */
+    transition: opacity 0.3s ease-in-out; /* Délai de notre animation  */
 }
 
 .like-checkbox:checked + .like-label .fa-heart {
-    opacity: 0; /* Quand notre checkbox est cliqué alors le premier coeur disparait */
+     opacity: 0;/* Quand notre checkbox est cliqué alors le premier coeur disparait */
 }
 
 .like-checkbox:checked + .like-label .fa-solid.fa-heart {
-    opacity: 1;
-    color: var(--maincolor); /* Couleur de remplissage du cœur */
+    opacity: 1; 
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* COEUR N2 */
 .like-checkbox-2 {
@@ -332,7 +332,9 @@ figcaption > p{
 
 .like-checkbox-2:checked + .like-label-2 .fa-solid.fa-heart {
     opacity: 1;
-    color: var(--maincolor); 
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* COEUR N3 */
 .like-checkbox-3 {
@@ -349,7 +351,10 @@ figcaption > p{
 
 .like-checkbox-3:checked + .like-label-3 .fa-solid.fa-heart {
     opacity: 1;
-    color: var(--maincolor); 
+    opacity: 1; 
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* COEUR N4 */
 .like-checkbox-4 {
@@ -366,7 +371,10 @@ figcaption > p{
 
 .like-checkbox-4:checked + .like-label-4 .fa-solid.fa-heart {
     opacity: 1;
-    color: var(--maincolor); 
+    opacity: 1; 
+    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 /* FOOTER */
 footer{
