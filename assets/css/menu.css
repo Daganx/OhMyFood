@@ -106,7 +106,7 @@ nav > a > i{
 
 .fa-solid.fa-heart {
     position: absolute; /* Positionnement de notre deuxieme coeur FA-SOLID */
-    top: 0;
+    /* top: 0; */
     left: 0;
     opacity: 0;
     transition: opacity 0.5s ease-in-out; /* Délai de notre animation  */
@@ -185,7 +185,7 @@ h3:after{
 }
 
 .plate-and-price > p:nth-child(2){
-    padding-right: 1rem;
+    padding-right: 10px;
     font-weight: bold;
 }
 
