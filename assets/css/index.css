@@ -30,7 +30,7 @@ input{
     width: 100%;
     max-width: 375px;
     height: 100%;
-    background-color: rgb(224, 222, 222); 
+    background-color: rgba(193, 191, 191, 0.796); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,17 @@ input{
 .loader {
     animation: spin 3s linear infinite;
 }
+
+.main-container{
+    animation: loadingindex 3s ease-in-out forwards;
+}
+
+@keyframes loadingindex {
+    0% { opacity : 0; display: none;}
+    50% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
 
 .loader > img{
     height: 230px;
@@ -288,93 +299,29 @@ figcaption > p{
     bottom: 2rem;
     right: 2rem;
     display: inline-block;
+}
+
+.fa-regular.fa-heart{
+    position: relative;
     font-size: 24px;
 }
 
-.like-checkbox {
-    display: none; /*  Display NONE pour le checkbox  */
-}
-
-.like-label {
-    cursor: pointer; /* Changement du curseur au clic */
-}
-
-.fa-solid.fa-heart {
-    position: absolute; /* Positionnement de notre deuxieme coeur FA-SOLID */
+.fa-solid.fa-heart{
+    position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out; /* Délai de notre animation  */
-}
-
-.like-checkbox:checked + .like-label .fa-heart {
-     opacity: 0;/* Quand notre checkbox est cliqué alors le premier coeur disparait */
-}
-
-.like-checkbox:checked + .like-label .fa-solid.fa-heart {
-    opacity: 1; 
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+    color: transparent;
+    background-image: linear-gradient(to right, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-/* COEUR N2 */
-.like-checkbox-2 {
-    display: none;
-}
-
-.like-label-2 {
-    cursor: pointer;
-}
-
-.like-checkbox-2:checked + .like-label-2 .fa-heart {
+    font-size: 24px;
     opacity: 0;
+    transition: opacity 0.5s
 }
 
-.like-checkbox-2:checked + .like-label-2 .fa-solid.fa-heart {
+.fa-solid.fa-heart:hover{
     opacity: 1;
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-/* COEUR N3 */
-.like-checkbox-3 {
-    display: none;
-}
-
-.like-label-3 {
-    cursor: pointer;
-}
-
-.like-checkbox-3:checked + .like-label-3 .fa-heart {
-    opacity: 0;
-}
-
-.like-checkbox-3:checked + .like-label-3 .fa-solid.fa-heart {
-    opacity: 1;
-    opacity: 1; 
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-/* COEUR N4 */
-.like-checkbox-4 {
-    display: none;
-}
-
-.like-label-4 {
-    cursor: pointer;
-}
-
-.like-checkbox-4:checked + .like-label-4 .fa-heart {
-    opacity: 0;
-}
-
-.like-checkbox-4:checked + .like-label-4 .fa-solid.fa-heart {
-    opacity: 1;
-    opacity: 1; 
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    transform: scale(1.05);
 }
 /* FOOTER */
 footer{

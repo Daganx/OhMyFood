@@ -88,39 +88,35 @@ nav > a > i{
     font-size: 28px;
 }
 
-.heart{
-    position: relative;
-}
-
 .heart > i{
     font-size: 24px;
 }
 
-.like-checkbox {
-    display: none; /*  Display NONE pour le checkbox  */
+.like-container{
+    position: relative;
 }
 
-.like-label {
-    cursor: pointer; /* Changement du curseur au clic */
+.fa-regular.fa-heart{
+    position: relative;
+    font-size: 24px;
 }
 
-.fa-solid.fa-heart {
-    position: absolute; /* Positionnement de notre deuxieme coeur FA-SOLID */
-    /* top: 0; */
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out; /* Délai de notre animation  */
-}
-
-.like-checkbox:checked + .like-label .fa-heart {
-    opacity: 0; /* Quand notre checkbox est cliqué alors le premier coeur disparait */
-}
-
-.like-checkbox:checked + .like-label .fa-solid.fa-heart {
-    opacity: 1;
-    background: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);/* Couleur de remplissage du cœur */
+.fa-solid.fa-heart{
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: transparent;
+    background-image: linear-gradient(to right, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
+    background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;/* Couleur de remplissage du coeur */
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.5s
+}
+
+.fa-solid.fa-heart:hover{
+    opacity: 1;
+    transform: scale(1.05);
 }
 /******* ENTREES ********/
 .article-container > h3 {
@@ -212,8 +208,8 @@ h3:after{
     font-size:larger;
     position: absolute;
     top: 0;
-    right: -50px; /* Position de départ de la coche (cachée à droite) */
-    width: 50px;
+    right: -70px; /* Position de départ de la coche (cachée à droite) */
+    width: 70px;
     height: 100%;
     background-color: #99E2D0;
     transition: right 0.5s ease-in-out;
@@ -228,11 +224,11 @@ h3:after{
 
 .article-infos:hover .plate-and-price {
     transition: padding-right 0.5s ease-in-out;
-    padding-right: 50px; /* Ajustez la valeur selon la largeur de votre coche */
+    padding-right: 70px; /* Ajustez la valeur selon la largeur de votre coche */
 }
 
 .article-infos:hover > h4{
-    padding-right: 50px;
+    padding-right: 80px;
 }
 
 .btn-commander{
