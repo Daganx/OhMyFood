@@ -288,12 +288,12 @@ footer > ul > li:nth-child(2) > a > i{
 }
 /* ANIMATION */
 .article-container {
-    opacity: 0; /* Commencer avec une opacité de 0 */
-    transform: translateY(20px); /* Déplacer vers le bas de 20px */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Ajouter une transition pour une apparition en douceur */
+    opacity: 0; /* Opacité a 0 */
+    transform: translateY(20px); /* Transform vers le bas de 20px */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition pour une apparation en 0.5S */
 }
 
-/* Gestion de l'apparition des animations */
+/* Gestion de l'apparition des animations avec décalage toutes les 0.5s*/
 .menu-container {
     animation: fadeInUp 0.5s ease 0.5s forwards;
 }
@@ -310,10 +310,9 @@ footer > ul > li:nth-child(2) > a > i{
     animation: fadeInUp 0.5s ease 2s forwards;
 }
 
-/* Keyframe pour mettre l'opacity à 1, Place Initial */
-@keyframes fadeInUp {
+@keyframes fadeInUp { /* Animation d'apparition pour chaque menu */
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Opacité à 1*/
+        transform: translateY(0); /* Position Initial */
     }
 }

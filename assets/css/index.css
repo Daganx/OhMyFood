@@ -38,11 +38,16 @@ input{
 }
 
 .loader {
-    animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite; /* Animation de SPIN du loader 3S */ 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); } /*Rotation de 0 à 100% fait un tour complet */
+    100% { transform: rotate(360deg); }
 }
 
 .main-container{
-    animation: loadingindex 3s ease-in-out forwards;
+    animation: loadingindex 3s ease-in-out forwards; /* Animation pour laisser 3S de loading*/
 }
 
 @keyframes loadingindex {
@@ -51,19 +56,13 @@ input{
     100% { opacity: 1;}
 }
 
-
 .loader > img{
     height: 230px;
     width: 230px;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
 .loader-container {
-    animation: 3s fadeOut forwards;
+    animation: 3s fadeOut forwards; /* Animation de Fade pour le loader sur 3S */
 }
 
 @keyframes fadeOut {
@@ -139,7 +138,7 @@ header{
     text-align: center;
     padding: 15px 20px 15px 20px;
     border-radius: 50px;
-    background-image: linear-gradient(to bottom, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
+    background-image: linear-gradient(to bottom, #de70dc 0%, #be64dc  50%, #a85ddc  100%); /* Utilisation du Dégradé*/
     color: white;
     font-size: 16px;
     border: none;
@@ -192,7 +191,7 @@ button:hover{
     left: -12px;
     top: 50%;
     transform: translateY(-50%);
-    background-color: var(--maincolor); 
+    background-color: var(--maincolor); /* Utilisation de notre variable */
     color: #fff;
     width: 25px; 
     height: 25px; 
@@ -295,33 +294,33 @@ figcaption > p{
 } 
 /****** GESTION DES COEURS ********/
 .gestion-heart{
-    position: absolute; /* Positionnement de notre coeur FA-HEART */
+    position: absolute; /* Positionnement du container de notre coeur */
     bottom: 2rem;
     right: 2rem;
     display: inline-block;
 }
 
 .fa-regular.fa-heart{
-    position: relative;
+    position: relative; /* Position relative sur le coeur regular */ 
     font-size: 24px;
 }
 
 .fa-solid.fa-heart{
-    position: absolute;
+    position: absolute; /* Position absolute sur le coeur solid */
     top: 0;
     left: 0;
-    color: transparent;
+    color: transparent; /* Utilisation de color transparent pour utiliser les propriétés du bas */
     background-image: linear-gradient(to right, #de70dc 0%, #be64dc  50%, #a85ddc  100%);
     background-clip: text;
     -webkit-background-clip: text;
     font-size: 24px;
     opacity: 0;
-    transition: opacity 0.5s
+    transition: opacity 0.5s /* Transition pour l'opacité */
 }
 
 .fa-solid.fa-heart:hover{
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.05); /* Sur le Hover, l'opacité passe à 1 sur coeur solid et leger grossissement */
 }
 /* FOOTER */
 footer{
