@@ -321,7 +321,7 @@ figcaption > p{
 
 .fa-solid.fa-heart:hover{
     opacity: 1;
-    transform: scale(1.05); /* Sur le Hover, l'opacité passe à 1 sur coeur solid et leger grossissement */
+    transform: scale(1.1); /* Sur le Hover, l'opacité passe à 1 sur coeur solid et leger grossissement */
 }
 /* FOOTER */
 footer{
