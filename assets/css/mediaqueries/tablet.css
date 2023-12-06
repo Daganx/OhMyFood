@@ -1,12 +1,6 @@
-@media ( min-width: 375px) and (max-width: 1024px) {
-   .main-container{
-    width: 100%;
-    max-width: 1024px;
-    box-sizing: border-box;
-   }
-
-   .loader-container{
-      max-width: 1024px;
-      width: 100%;
+@media ( min-width: 576px){
+   .explain-card-text > p{
+      text-align: center;
+      margin-left: 0;
    }
 }

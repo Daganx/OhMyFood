@@ -25,7 +25,6 @@ input{
 /**** GESTION MAIN CONTAINER  ******/
 .main-container{
     width: 100%;
-    max-width: 375px;
     box-sizing: border-box;
 }
 /******* HEADER ********/
@@ -224,7 +223,7 @@ h3:after{
 
 .article-infos:hover .plate-and-price {
     transition: padding-right 0.5s ease-in-out;
-    padding-right: 70px; /* Ajustez la valeur selon la largeur de votre coche */
+    padding-right: 70px; /* Ajustez la valeur selon la largeur de la coche */
 }
 
 .article-infos:hover > h4{
